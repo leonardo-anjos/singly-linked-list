@@ -16,6 +16,12 @@ public class Principal {
 		// problem 2
 		list.insertAtPosition(23, 2);
 		list.recursivePrint(list.head);
+		System.out.println();
+		
+		// problem 3
+		list.insertAfterNode(23, 0);
+		list.recursivePrint(list.head);
+		System.out.println();
 	}
 	
 	public static void main(String[] args) {

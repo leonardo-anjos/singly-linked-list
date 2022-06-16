@@ -2,6 +2,21 @@
 public class LSE {
 	public Node head = null;
 	
+	// problem 3 -> inset value A after node of value B
+	public void insertAfterNode(int value, int info) {
+		Node aux = this.head;
+		
+		while(aux != null) {
+			if (aux.info == value) {
+				Node node = new Node(info);
+				node.next = aux.next;
+				aux.next = node;
+			}
+			
+			aux = aux.next;
+		}
+	}
+	
 	//problem 2 -> insert value A at position B
 	public void insertAtPosition(int value, int position) {
 		Node node = new Node(value);
