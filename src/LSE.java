@@ -2,6 +2,31 @@
 public class LSE {
 	public Node head = null;
 	
+	//problem 2 -> insert value A at position B
+	public void insertAtPosition(int value, int position) {
+		Node node = new Node(value);
+		
+		if (position < 0 || position > this.length()) return;
+		
+		if (this.head == null) {
+			this.head = node;
+		} else {
+			if (position == 0) {
+				node.next = head;
+				head = node;
+			} else {
+				Node aux = this.head;
+				
+				for (int i = 0; i < position - 1; i++) {
+					aux = aux.next;
+				}
+				
+				node.next = aux.next;
+				aux.next = node;
+			}
+		}
+	}
+	
 	// problem 1 -> insert value at the end of list
 	public void insertAtEnd(int value) {
 		Node node = new Node(value);
