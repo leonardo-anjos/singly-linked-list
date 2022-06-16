@@ -68,15 +68,18 @@ public class LSE {
 		aux.next = aux.next.next;
 	}
 	
-	//prolem 4 -> remove value from end list
+	//problem 4 -> remove value from end list
 	public void removeEndList() {
 		Node aux = this.head;
+		int position = this.length() - 1;
 		
-		for (int i = 0; i < this.length() - 1; i++) {
+		if (position <= 0) return;
+		
+		for (int i = 0; i < position -1; i++) {
 			aux = aux.next;
-			
-			if (aux.next == null) aux = aux;
 		}
+		
+		aux.next = aux.next.next;
 	}
 	
 	// problem 3 -> inset value A after node of value B
