@@ -8,6 +8,8 @@ public class Principal {
 		list.insertAtEnd(3);
 		list.insertAtEnd(55);
 		list.insertAtEnd(7);
+		list.insertAtEnd(3);
+		list.insertAtEnd(6);
 		
 		list.recursivePrint(list.head);
 		System.out.println();
@@ -18,9 +20,9 @@ public class Principal {
 //		list.removeEndList();			// problem 4
 //		list.removeAtPos(1);			// problem 5
 //		list.removeAfterNode(3);		// problem 6
-//		list.inverterNodes(3);			// problem 7
+//		list.inverterNodes(0);			// problem 7
 //		list.avgInfoList();				// problem 8
-//		list.removeOcurrence();			// problem 9
+//		list.removeOcurrence(3);	    // problem 9
 //		list.reverseList();				// problem 10
 		
 		list.recursivePrint(list.head);

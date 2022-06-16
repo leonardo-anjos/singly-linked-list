@@ -8,8 +8,16 @@ public class LSE {
 	}
 	
 	// problem 9 -> remove all occurences from list
-	public void removeOcurrence() {
+	public void removeOcurrence(int value) {
+		Node aux = this.head;
 		
+		if (this.head.info == value) return;
+		
+		while(aux != null) {			
+			aux = aux.next;
+			
+			if (aux != null && aux.info == value) aux = aux.next;
+		}
 	}
 	
 	// problem 8 -> avg from list
@@ -35,7 +43,15 @@ public class LSE {
 	
 	// problem 7 -> inverter node i with i + 1
 	public void inverterNodes(int position) {
+		Node node = this.head;
+		Node aux1, aux2;
 		
+		if (this.length() < 2 || position >= this.length()) return;
+		
+		if (position == 0) {
+			aux1 = new Node(node.next.info);
+			aux2 = new Node(node.info);
+		}
 	}
 	
 	// problem 6 -> remove value before node
@@ -61,7 +77,7 @@ public class LSE {
 			this.head = this.head.next;
 		}
 		
-		for (int i = 0; i < position -1; i++) {
+		for (int i = 0; i < position - 1; i++) {
 			aux = aux.next;
 		}
 		
@@ -75,7 +91,7 @@ public class LSE {
 		
 		if (position <= 0) return;
 		
-		for (int i = 0; i < position -1; i++) {
+		for (int i = 0; i < position - 1; i++) {
 			aux = aux.next;
 		}
 		
