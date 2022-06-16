@@ -1,6 +1,55 @@
 
 public class LSE {
 	public Node head = null;
+
+	// problem 10 -> reverse list
+	public void reverseList() {
+		
+	}
+	
+	// problem 9 -> remove all occurences from list
+	public void removeOcurrence() {
+		
+	}
+	
+	// problem 8 -> avg from list
+	public void avgInfoList() {
+		Node aux = this.head;
+		int totalSum = 0;
+		int avg = 0;
+		
+		if (this.length() == 0) {
+			totalSum = aux.info;
+			avg = totalSum;
+		} else {			
+			while (aux != null) {
+				aux = aux.next;
+				
+				if (aux != null) totalSum = totalSum + aux.info;
+			}
+		}
+		
+		avg = totalSum / this.length();
+		System.out.println(avg);
+	}
+	
+	// problem 7 -> inverter node i with i + 1
+	public void inverterNodes(int position) {
+		
+	}
+	
+	// problem 6 -> remove value before node
+	public void removeAfterNode(int value) {
+		Node aux = this.head;
+		
+		while(aux != null) {
+			if (aux.info == value && aux.next != null) {
+				aux.next = aux.next.next;
+			}
+			aux = aux.next;
+		}
+	}
+	
 	
 	// problem 5 -> remove value from position
 	public void removeAtPos(int position) {
@@ -23,7 +72,11 @@ public class LSE {
 	public void removeEndList() {
 		Node aux = this.head;
 		
-		if (this.head == null) return;
+		for (int i = 0; i < this.length() - 1; i++) {
+			aux = aux.next;
+			
+			if (aux.next == null) aux = aux;
+		}
 	}
 	
 	// problem 3 -> inset value A after node of value B
