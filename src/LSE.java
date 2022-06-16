@@ -2,6 +2,23 @@
 public class LSE {
 	public Node head = null;
 	
+	// problem 1 -> insert value at the end of list
+	public void insertAtEnd(int value) {
+		Node node = new Node(value);
+		
+		if (this.head == null) {
+			this.head = node;
+		} else {
+			Node aux = this.head;
+			
+			while(aux.next != null) {
+				aux = aux.next;
+			}
+			
+			aux.next = node;
+		}
+	}
+	
 	public int length() {
 		int count = 0;
 		Node aux = this.head;
