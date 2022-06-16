@@ -15,9 +15,9 @@ public class Principal {
 //		list.insertAtEnd(0); 			// problem 1
 //		list.insertAtPosition(23, 2); 	// problem 2
 //		list.insertAfterNode(55, 10); 	// problem 3
-		list.removeEndList();			// problem 4
+//		list.removeEndList();			// problem 4
 //		list.removeAtPos(1);			// problem 5
-//		list.removeAfterNode(10);		// problem 6
+//		list.removeAfterNode(3);		// problem 6
 //		list.inverterNodes(3);			// problem 7
 //		list.avgInfoList();				// problem 8
 //		list.removeOcurrence();			// problem 9
