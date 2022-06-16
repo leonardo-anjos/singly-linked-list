@@ -22,6 +22,16 @@ public class Principal {
 		list.insertAfterNode(23, 0);
 		list.recursivePrint(list.head);
 		System.out.println();
+		
+//		// problem 4
+//		list.removeEndList();
+//		list.recursivePrint(list.head);
+//		System.out.println();
+		
+		// problem 5
+		list.removeAtPos(10);
+		list.recursivePrint(list.head);
+		System.out.println();
 	}
 	
 	public static void main(String[] args) {

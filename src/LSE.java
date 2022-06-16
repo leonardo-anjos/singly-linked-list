@@ -2,6 +2,30 @@
 public class LSE {
 	public Node head = null;
 	
+	// problem 5 -> remove value from position
+	public void removeAtPos(int position) {
+		Node aux = this.head;
+		
+		if (this.head == null || position < 0 || position > this.length()) return;
+		
+		if (position == 0) {
+			this.head = this.head.next;
+		}
+		
+		for (int i = 0; i < position -1; i++) {
+			aux = aux.next;
+		}
+		
+		aux.next = aux.next.next;
+	}
+	
+	//prolem 4 -> remove value from end list
+	public void removeEndList() {
+		Node aux = this.head;
+		
+		if (this.head == null) return;
+	}
+	
 	// problem 3 -> inset value A after node of value B
 	public void insertAfterNode(int value, int info) {
 		Node aux = this.head;
